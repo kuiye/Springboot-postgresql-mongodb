@@ -1,0 +1,25 @@
+logging:
+    level.*: DEBUG
+    file: ./timerlog.log
+spring:
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: logServer
+  datasource:
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:postgresql://127.0.0.1:9527/mytest
+    username: postgres
+    password: 438036
+    driver-class-name: org.postgresql.Driver
+    minIdle: 1
+    maxActive: 20
+    initialSize: 1
+    timeBetweenEvictionRunsMillis: 3000
+    minEvictableIdleTimeMillis: 300000
+server:
+  port: 8581
+
+
